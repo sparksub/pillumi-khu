@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front/util/palette.dart' as palette;
-import 'package:front/util/show_dialog_warning.dart';
+import 'package:front/widgets/dialog/show_dialog_warning.dart';
 
 class AddPhotoButtonWidget extends StatefulWidget {
 

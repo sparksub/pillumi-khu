@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:front/util/palette.dart' as palette;
 
-import '../screens/result_screen_widget.dart';
+import '../../screens/result_screen_widget.dart';
 
 ShowDialogWarning(BuildContext context) async {
   await showDialog(
@@ -37,7 +37,7 @@ ShowDialogWarning(BuildContext context) async {
                     Text("잘못된 사진",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                           fontSize: 13
                       ),
                     )
@@ -52,7 +52,7 @@ ShowDialogWarning(BuildContext context) async {
                     Text("좋은 사진",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                           fontSize: 13
                       ),
                     )
@@ -127,7 +127,7 @@ Text waringText(text) {
     textAlign: TextAlign.center,
     style: TextStyle(
         color: palette.black,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w500,
         fontSize: 15
     ),
   );

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:front/screens/result_screen_widget.dart';
 import 'package:front/util/palette.dart' as palette;
 
-import '../util/add_photo_button.dart';
-import '../util/show_dialog_warning.dart';
+import '../widgets/button/add_photo_button.dart';
 
 class MainScreenWidget extends StatefulWidget{
   const MainScreenWidget({Key? key}) : super(key: key);
+
+  @override
   MainScreen createState()=> MainScreen();
 }
 
@@ -16,7 +17,7 @@ class MainScreen extends State<MainScreenWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: double.infinity,
       child: Scaffold(
