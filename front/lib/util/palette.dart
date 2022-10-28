@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'createMaterialColor.dart';
+import 'create_material_color.dart';
 
 MaterialColor red = createMaterialColor(Color(0xFFed1b24));
 MaterialColor darkBlue = createMaterialColor(Color(0xFF23408e));

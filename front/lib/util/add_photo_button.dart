@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:front/util/palette.dart' as palette;
 
-class AddPhotoButton extends StatelessWidget {
+class AddPhotoButtonWidget extends StatefulWidget {
 
-  const AddPhotoButton({
+  const AddPhotoButtonWidget({
     Key? key,
     @required this.text,
     this.updateBool,
-    this.side,
   }) : super(key: key);
 
   final text;
   final updateBool;
-  final side;
 
+  @override
+  AddPhotoButton createState() => AddPhotoButton();
+}
+
+class AddPhotoButton extends State<AddPhotoButtonWidget>{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,10 +33,12 @@ class AddPhotoButton extends StatelessWidget {
               ),
               iconSize: 100,
               onPressed: (){
-                updateBool(side);
+                setState((){
+                  widget.updateBool(widget.text);
+                });
               },
             ),
-            Text("$text면 등록하기",
+            Text("${widget.text}면 등록하기",
                 style: const TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w500
