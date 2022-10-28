@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front/util/palette.dart' as palette;
+import 'package:front/util/show_dialog_warning.dart';
 
 class AddPhotoButtonWidget extends StatefulWidget {
 
@@ -33,6 +34,7 @@ class AddPhotoButton extends State<AddPhotoButtonWidget>{
               ),
               iconSize: 100,
               onPressed: (){
+                ShowDialogWarning(context);
                 setState((){
                   widget.updateBool(widget.text);
                 });

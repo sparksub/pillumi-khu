@@ -69,7 +69,6 @@ ShowDialogWarning(BuildContext context) async {
                 SimpleDialogOption(
                   onPressed: () {
                     Navigator.pop(context);
-                    goToResultPage(context);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +92,6 @@ ShowDialogWarning(BuildContext context) async {
                 SimpleDialogOption(
                   onPressed: () {
                     Navigator.pop(context);
-                    goToResultPage(context);
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -121,13 +119,6 @@ ShowDialogWarning(BuildContext context) async {
         ),
       );
     },
-  );
-}
-
-void goToResultPage (context) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => ResultScreenWidget()),
   );
 }
 

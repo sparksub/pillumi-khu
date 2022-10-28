@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:front/screens/result_screen_widget.dart';
 import 'package:front/util/palette.dart' as palette;
 
 import '../util/add_photo_button.dart';
@@ -48,7 +49,7 @@ class MainScreen extends State<MainScreenWidget> {
                 color: palette.gray
               ) : AddPhotoButtonWidget(text: "앞", updateBool: updateBool),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
               back ? Container(
@@ -57,23 +58,23 @@ class MainScreen extends State<MainScreenWidget> {
                   color: palette.gray
               ) : AddPhotoButtonWidget(text: "뒷", updateBool: updateBool),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               SizedBox(
                 width: 200,
-                height: 40,
+                height: 45,
                 child: ElevatedButton(
                   child: const Text('검색하기',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold
                       )),
                   style: (front&&back) ?
                   ButtonStyle(backgroundColor: palette.darkBlueColor)
                       : ButtonStyle(backgroundColor: palette.grayColor),
                   onPressed: (front&&back) ? () {
-                    ShowDialogWarning(context);
+                    goToResultPage(context);
                     setState((){
                       front = !front;
                       back = !back;
@@ -99,5 +100,12 @@ class MainScreen extends State<MainScreenWidget> {
         back = !back;
       }
     });
+  }
+
+  void goToResultPage (context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ResultScreenWidget()),
+    );
   }
 }
