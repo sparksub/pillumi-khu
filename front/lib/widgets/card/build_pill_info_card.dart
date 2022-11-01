@@ -14,7 +14,7 @@ Card buildPillInfoCard(title, text) {
               Text(title,
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 17),
+                    fontSize: 20),
               ),
               const SizedBox(height: 8.0),
               Padding(
@@ -23,7 +23,7 @@ Card buildPillInfoCard(title, text) {
                   softWrap: true,
                   style: const TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 15),
+                      fontSize: 17),
                 ),
               ),
             ],
@@ -47,14 +47,14 @@ Card buildPillInfoPhotoCard(title, imgUrl) {
               Text(title,
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 17),
+                    fontSize: 20),
               ),
               const SizedBox(height: 8.0),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Image(
                   image: AssetImage(imgUrl),
-                  height: 60,
+                  height: 80,
                 ),
               ),
             ],

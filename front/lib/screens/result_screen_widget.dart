@@ -54,7 +54,7 @@ class ResultScreen extends State<ResultScreenWidget> {
                           child: Text(pillTitle,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                              fontSize: 25),
                           ),
                         ),
                         Container(
@@ -77,10 +77,10 @@ class ResultScreen extends State<ResultScreenWidget> {
                   alignment: Alignment.bottomLeft,
                   padding: const EdgeInsets.only(
                       left: 10.0, right: 10.0, top: 20.0, bottom: 5.0),
-                  child: const Text("찾고 있는 약이 아닌가요? 비슷한 약도 확인해보세요.",
+                  child: const Text("찾고 있는 약이 아닌가요? \n비슷한 약도 확인해보세요.",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 15),
+                        fontSize: 20),
                   ),
                 ),
                 BuildAnotherPillCard("비타민 A 및 D제", "품목명"),

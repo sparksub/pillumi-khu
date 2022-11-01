@@ -18,7 +18,7 @@ Padding textForPillInfo(text1, text2) {
             style: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: palette.darkBlue,
-                fontSize: 15
+                fontSize: 17
             ),
           ),
         ),
@@ -29,7 +29,7 @@ Padding textForPillInfo(text1, text2) {
             style: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: palette.black,
-                fontSize: 15
+                fontSize: 17
             ),
           ),
         ),

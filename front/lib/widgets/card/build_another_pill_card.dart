@@ -14,12 +14,12 @@ Card BuildAnotherPillCard(title, name) {
           title: Text(title,
             style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 17),
+                fontSize: 20),
           ),
           subtitle: Text(name,
             style: const TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 15
+                fontSize: 17
             ),
           ),
         ),

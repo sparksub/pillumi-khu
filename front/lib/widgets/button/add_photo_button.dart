@@ -42,8 +42,8 @@ class AddPhotoButton extends State<AddPhotoButtonWidget>{
             ),
             Text("${widget.text}면 등록하기",
                 style: const TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600
                 ))
           ],
         ),

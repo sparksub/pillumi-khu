@@ -45,5 +45,18 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<!-- Permission options for the `mediaLibrary` group -->
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Music!</string>
+    <key>kTCCServiceMediaLibrary</key>
+    <string>media</string>
+
+    <!-- Permission options for the `camera` group -->
+    <key>NSCameraUsageDescription</key>
+    <string>약 사진을 촬영하기 위해서 필요한 권한입니다.</string>
+
+    <!-- Permission options for the `photos` group -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>약 사진을 등록하기 위해서 필요한 권한입니다.</string>
 </dict>
 </plist>

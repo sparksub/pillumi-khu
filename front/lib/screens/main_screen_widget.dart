@@ -3,6 +3,7 @@ import 'package:front/screens/result_screen_widget.dart';
 import 'package:front/util/palette.dart' as palette;
 
 import '../widgets/button/add_photo_button.dart';
+import '../util/permission.dart';
 
 class MainScreenWidget extends StatefulWidget{
   const MainScreenWidget({Key? key}) : super(key: key);
@@ -14,6 +15,15 @@ class MainScreenWidget extends StatefulWidget{
 class MainScreen extends State<MainScreenWidget> {
   bool front = false;
   bool back = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    requestCameraPermission();
+    requestPhotosPermission();
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +46,7 @@ class MainScreen extends State<MainScreenWidget> {
                 '사진으로 알약을 검색해보세요!',
                 style: TextStyle(
                     color: palette.black,
-                    fontSize: 20,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold
                 ),
               ),
@@ -110,3 +120,4 @@ class MainScreen extends State<MainScreenWidget> {
     );
   }
 }
+
