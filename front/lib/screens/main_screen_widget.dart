@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:front/screens/result_screen_widget.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:front/util/palette.dart' as palette;
 
 import '../widgets/button/add_photo_button.dart';
@@ -13,8 +15,8 @@ class MainScreenWidget extends StatefulWidget{
 }
 
 class MainScreen extends State<MainScreenWidget> {
-  bool front = false;
-  bool back = false;
+  XFile? _pickedFrontPhoto;
+  XFile? _pickedBackPhoto;
 
   @override
   void initState() {
@@ -47,27 +49,38 @@ class MainScreen extends State<MainScreenWidget> {
                 style: TextStyle(
                     color: palette.black,
                     fontSize: 25,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.w500
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
               // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
-              front ? Container(
+              (_pickedFrontPhoto != null) ? Container(
                 width: 200,
                 height: 200,
-                color: palette.gray
-              ) : AddPhotoButtonWidget(text: "앞", updateBool: updateBool),
+                // color: palette.gray,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: FileImage(File(_pickedFrontPhoto!.path)),
+                      fit: BoxFit.cover
+                  ),
+                ),
+              ) : AddPhotoButtonWidget(text: "앞", updatePhoto: updatePhoto),
               SizedBox(
                 height: 10,
               ),
               // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
-              back ? Container(
+              (_pickedBackPhoto != null) ? Container(
                   width: 200,
                   height: 200,
-                  color: palette.gray
-              ) : AddPhotoButtonWidget(text: "뒷", updateBool: updateBool),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: FileImage(File(_pickedBackPhoto!.path)),
+                        fit: BoxFit.cover
+                  ),
+                ),
+              ) : AddPhotoButtonWidget(text: "뒷", updatePhoto: updatePhoto),
               SizedBox(
                 height: 20,
               ),
@@ -81,14 +94,14 @@ class MainScreen extends State<MainScreenWidget> {
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                       )),
-                  style: (front&&back) ?
+                  style: ((_pickedFrontPhoto != null) && (_pickedBackPhoto != null)) ?
                   ButtonStyle(backgroundColor: palette.darkBlueColor)
                       : ButtonStyle(backgroundColor: palette.grayColor),
-                  onPressed: (front&&back) ? () {
+                  onPressed: ((_pickedFrontPhoto != null) && (_pickedBackPhoto != null)) ? () {
                     goToResultPage(context);
                     setState((){
-                      front = !front;
-                      back = !back;
+                      _pickedFrontPhoto = null;
+                      _pickedBackPhoto = null;
                     });
                   } : null,
                 ),
@@ -100,15 +113,15 @@ class MainScreen extends State<MainScreenWidget> {
     );
   }
 
-  void updateBool(String inputBool){
+  void updatePhoto(String inputBool, XFile photo){
     setState((){
       if(inputBool == '앞')
       {
-        front = !front;
+        _pickedFrontPhoto = photo;
       }
       else if(inputBool == '뒷')
       {
-        back = !back;
+        _pickedBackPhoto = photo;
       }
     });
   }

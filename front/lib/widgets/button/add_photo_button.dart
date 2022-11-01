@@ -7,17 +7,18 @@ class AddPhotoButtonWidget extends StatefulWidget {
   const AddPhotoButtonWidget({
     Key? key,
     @required this.text,
-    this.updateBool,
+    this.updatePhoto,
   }) : super(key: key);
 
   final text;
-  final updateBool;
+  final updatePhoto;
 
   @override
   AddPhotoButton createState() => AddPhotoButton();
 }
 
 class AddPhotoButton extends State<AddPhotoButtonWidget>{
+  var _photo;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,10 +34,10 @@ class AddPhotoButton extends State<AddPhotoButtonWidget>{
                 Icons.add_a_photo,
               ),
               iconSize: 100,
-              onPressed: (){
-                ShowDialogWarning(context);
+              onPressed: () async {
+                _photo = await ShowDialogWarning(context);
                 setState((){
-                  widget.updateBool(widget.text);
+                  widget.updatePhoto(widget.text, _photo);
                 });
               },
             ),

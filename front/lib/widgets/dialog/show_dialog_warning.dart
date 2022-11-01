@@ -3,7 +3,7 @@ import 'package:front/util/palette.dart' as palette;
 import 'package:image_picker/image_picker.dart';
 
 ShowDialogWarning(BuildContext context) async {
-  await showDialog(
+  return await showDialog(
     context: context,
     builder: (BuildContext context) {
       return  AlertDialog(
@@ -26,9 +26,7 @@ ShowDialogWarning(BuildContext context) async {
             waringText("1. 밝은 조명 아래서 찍어주세요."),
             waringText("2. 알약이 전부 보이게 찍어주세요."),
             waringText("3. 깔끔한 배경에서 찍어주세요."),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             waringText("*예시*"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -74,9 +72,9 @@ ShowDialogWarning(BuildContext context) async {
         actions: <Widget>[
           TextButton(
             onPressed: () async {
-              var image = await ImagePicker.platform.pickImage(source: ImageSource.camera);
+              var image = await ImagePicker.platform.getImage(source: ImageSource.camera);
               // File file = await ImagePicker.pickImage(source: ImageSource.camera);
-              Navigator.pop(context);
+              Navigator.pop(context, image);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -101,9 +99,9 @@ ShowDialogWarning(BuildContext context) async {
           ),
           TextButton(
             onPressed: () async {
-              var image = await ImagePicker.platform.pickImage(source: ImageSource.gallery);
+              var image = await ImagePicker.platform.getImage(source: ImageSource.gallery);
               // File file = await ImagePicker.pickImage(source: ImageSource.gallery);
-              Navigator.pop(context);
+              Navigator.pop(context, image);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
