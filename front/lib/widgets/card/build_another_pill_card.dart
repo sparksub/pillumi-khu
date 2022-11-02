@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Card BuildAnotherPillCard(title, name) {
+Card BuildAnotherPillCard(title, name, img) {
   return Card(
       elevation: 2.0,
       child: Container(
@@ -8,7 +8,7 @@ Card BuildAnotherPillCard(title, name) {
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
           leading: Image(
-            image: AssetImage('assets/pill-icon-nobackground.png'),
+            image: AssetImage(img),
             height: 60,
           ),
           title: Text(title,

@@ -18,6 +18,8 @@ class MainScreen extends State<MainScreenWidget> {
   XFile? _pickedFrontPhoto;
   XFile? _pickedBackPhoto;
 
+  final String _logoImage = 'assets/pill-icon-nobackground.png';
+
   @override
   void initState() {
     // TODO: implement initState
@@ -38,7 +40,7 @@ class MainScreen extends State<MainScreenWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(
-                image: AssetImage('assets/pill-icon-nobackground.png'),
+                image: AssetImage(_logoImage),
                 width: 70,
               ),
               SizedBox(
@@ -55,7 +57,7 @@ class MainScreen extends State<MainScreenWidget> {
               SizedBox(
                 height: 10,
               ),
-              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
+              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록 (server)
               (_pickedFrontPhoto != null) ? Container(
                 width: 200,
                 height: 200,
@@ -70,7 +72,7 @@ class MainScreen extends State<MainScreenWidget> {
               SizedBox(
                 height: 10,
               ),
-              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
+              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록 (server)
               (_pickedBackPhoto != null) ? Container(
                   width: 200,
                   height: 200,
@@ -88,6 +90,7 @@ class MainScreen extends State<MainScreenWidget> {
                 width: 200,
                 height: 45,
                 child: ElevatedButton(
+                  // TODO: (server) 사진 보내서 데이터 받기
                   child: const Text('검색하기',
                       style: TextStyle(
                           color: Colors.white,

@@ -35,7 +35,7 @@ ShowDialogWarning(BuildContext context) async {
                   mainAxisSize: MainAxisSize.min,
                   children: const [
                     Image(
-                      image: AssetImage('assets/pill-icon-nobackground.png'),
+                      image: AssetImage('assets/bad-photo.jpg'),
                       width: 80,
                     ),
                     SizedBox(height: 5),
@@ -52,7 +52,7 @@ ShowDialogWarning(BuildContext context) async {
                   mainAxisSize: MainAxisSize.min,
                   children: const [
                     Image(
-                      image: AssetImage('assets/pill-icon-nobackground.png'),
+                      image: AssetImage('assets/good-photo.jpg'),
                       width: 80,
                     ),
                     SizedBox(height: 5),
@@ -91,7 +91,7 @@ ShowDialogWarning(BuildContext context) async {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
-                      fontSize: 15
+                      fontSize: 17
                   ),
                 ),
               ],
@@ -118,7 +118,7 @@ ShowDialogWarning(BuildContext context) async {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
-                      fontSize: 15
+                      fontSize: 17
                   ),
                 ),
               ],
