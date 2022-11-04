@@ -33,7 +33,8 @@ Card buildPillInfoCard(title, text) {
   );
 }
 
-Card buildPillInfoPhotoCard(title, imgUrl) {
+Card buildPillInfoPhotoCard(String title, List<dynamic> imgUrlList) {
+
   return Card(
       elevation: 2.0,
       child: Container(
@@ -50,12 +51,13 @@ Card buildPillInfoPhotoCard(title, imgUrl) {
                     fontSize: 20),
               ),
               const SizedBox(height: 8.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                child: Image(
-                  image: AssetImage(imgUrl),
-                  height: 80,
-                ),
+              Row(
+                children: imgUrlList.map<Widget>((img)=> Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Image(
+                        image: AssetImage(img),
+                        height: 100)
+                )).toList()
               ),
             ],
           ),

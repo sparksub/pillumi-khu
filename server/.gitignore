@@ -1,0 +1,13 @@
+config.yml
+
+__pycache__/
+
+.idea/
+
+.ipynb_checkpoints/
+
+.DS_Store
+
+git.sh
+
+/venv
