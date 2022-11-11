@@ -1,10 +1,16 @@
 from flask_restx import fields
 
 pills = {
-    'ITEM_NAME': 'ITEM_NAME',
-    'ENTP_NAME': 'ENTP_NAME',
-    'ITEM_IMAGE': 'ITEM_IMAGE',
-    'CLASS_NAME': 'CLASS_NAME'
+    "ITEM_NAME": fields.String(),
+    "ENTP_NAME": fields.String(),
+    "CLASS_NAME": fields.String(),
+    "Efficacy": fields.String(),
+    "Dosage": fields.String(),
+    "AtpnWarnQesitm": fields.String(),
+    "AtpnQesitm": fields.String(),
+    "SeQesitm": fields.String(),
+    "DepositMethodQesitm": fields.String(),
+    "PillImg": fields.String()
 }
 
 pill_search_request = {
@@ -13,10 +19,6 @@ pill_search_request = {
 }
 
 pill_search_response = {
-    "ITEM_NAME": fields.String(),
-    "ENTP_NAME": fields.String(),
-    "CLASS_NAME": fields.String(),
-    "Efficacy": fields.String(),
-    "Dosage": fields.String(),
-    "InfoImg": fields.List(fields.String()),
+    "ResultPill": fields.String(),
+    "OtherPill": fields.List(fields.String())
 }

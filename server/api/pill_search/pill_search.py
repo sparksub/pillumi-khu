@@ -1,12 +1,9 @@
 from flask import request
 from flask_restx import Namespace, Resource
 from shortuuid import uuid
-import numpy as np
-import io
-import base64
-from PIL import Image
 
 from api.pill_search.model.pill_search_request import *
+from api.pill_search.util.get_pill_info import get_pill_info
 
 pill_search = Namespace("pillsearch")
 
@@ -29,10 +26,13 @@ class search_pill(Resource):
         :return: 알약 검색 결과
         """
 
+        # TODO: 기존 dataset에서 itemSeq로 공데포에서 복약정보 검색. 기존 dataset에서 약 분류데이터 가져와서 사용하기
+
         try:
+            similar = [[199200354, "건위소화제 (233)"], [199200706, "건위소화제(233)"]]
             p_id = str(uuid())
             data = request.get_json()
-            print(data)
+            # print(data)
 
             # TODO: 약 검색 모델에 넣기
             # classification_modal = tf.keras.models.load_model("api/pill_model/pill_classification.h5")
@@ -69,14 +69,16 @@ class search_pill(Resource):
             #
             # user_ref.document(f"{data['userid']}").collection("pill_search").document(f"{fr_id}").set(data)
 
+            result = get_pill_info(201605694, "칼슘제(321)")
+            # print(result)
+            if len(similar) is not 0:
+                for i in range(len(similar)):
+                    similar[i] = get_pill_info(similar[i][0], similar[i][1])
+            # print(similar)
+
             return {
-                       "ITEM_NAME": "타이레놀500mg",
-                       "ENTP_NAME": "한국얀센",
-                       "CLASS_NAME": "해열, 진통, 소염제",
-                       "Efficacy": "감기로 인한 발열 및 동통(통증), 두통, 신경통, 근육통, 월경통, 염좌통(삔 통증)",
-                       "Dosage": "만 12세 이상 소아 및 성인: 1회 1~2정씩 1일 3-4회 (4-6시간 마다) 필요시 복용한다. 1일 최대 4그램 (8정)을 초과하여 복용하지 않는다. 이 "
-                                 "약은 가능한 최단기간동안 최소 유효용량으로 복용한다.",
-                       "InfoImg": ["assets/sample_eat_info1.jpeg", "assets/sample_eat_info2.jpeg"]
+                       "ResultPill": result,
+                       "OtherPill": similar
                    }, 200
 
         except Exception as e:

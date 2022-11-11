@@ -8,6 +8,9 @@ void main() {
 
 class PillumiApp extends StatelessWidget {
   const PillumiApp({Key? key}) : super(key: key);
+  // PillumiApp(){
+  //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+  // }
 
   // This widget is the root of your application.
   @override

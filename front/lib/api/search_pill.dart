@@ -5,7 +5,25 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-String base_url = 'http://172.16.23.198:5001';
+String base_url = 'http://172.30.1.46:5001';
+
+class PillList{
+  final Pill main;
+  final List<Pill> others;
+
+  PillList({required this.main, required this.others});
+
+  factory PillList.fromJson(Map<String, dynamic> pillMap){
+    var list = pillMap['OtherPill'] as List;
+    List<Pill> othersPill = list.map((i)=> Pill.fromJson(i)).toList();
+
+    return PillList(
+        main: Pill.fromJson(pillMap['ResultPill']),
+        others: othersPill,
+    );
+  }
+
+}
 
 class Pill {
   final String itemName;
@@ -13,8 +31,14 @@ class Pill {
   final String className;
   final String efficacy;
   final String dosage;
+  final String atpnWarnQesitm;
+  final String atpnQesitm;
+  final String seQesitm;
+  final String depoditMetodQesirm;
+  final String pillImg;
+  final String intrcQesitm;
 
-  final List<String> infoImg;
+  // final List<String> infoImg;
 
   Pill({
     required this.itemName,
@@ -22,11 +46,18 @@ class Pill {
     required this.className,
     required this.efficacy,
     required this.dosage,
-    required this.infoImg});
+    required this.atpnWarnQesitm,
+    required this.atpnQesitm,
+    required this.seQesitm,
+    required this.depoditMetodQesirm,
+    required this.pillImg,
+    required this.intrcQesitm
+    // required this.infoImg
+  });
 
   factory Pill.fromJson(Map<String, dynamic> pillMap){
-    var infoImgFromJson = pillMap['InfoImg'];
-    List<String> infoImg = new List<String>.from(infoImgFromJson);
+    // var infoImgFromJson = pillMap['InfoImg'];
+    // List<String> infoImg = new List<String>.from(infoImgFromJson);
 
     return Pill(
       itemName: pillMap['ITEM_NAME'],
@@ -34,27 +65,25 @@ class Pill {
       className: pillMap['CLASS_NAME'],
       efficacy: pillMap['Efficacy'],
       dosage: pillMap['Dosage'],
-      infoImg: infoImg,
+      atpnWarnQesitm: pillMap['AtpnWarnQesitm'],
+      atpnQesitm: pillMap['AtpnQesitm'],
+      intrcQesitm: pillMap["IntrcQesitm"],
+      seQesitm: pillMap['SeQesitm'],
+      depoditMetodQesirm: pillMap['DepositMethodQesitm'],
+      pillImg: pillMap['PillImg'],
+      // infoImg: infoImg,
     );
   }
 }
 
-Future<Pill> SearchPill(pillImageFront, pillImageBack) async {
+Future<PillList> SearchPill(base64frontImg, base64backImg) async {
   Map<String, String> headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   };
 
-  File frontImgFile = File(pillImageFront!.path);
-  File backImgFile = File(pillImageBack!.path);
-  List<int> frontImgBytes = frontImgFile.readAsBytesSync();
-  List<int> backImgBytes = backImgFile.readAsBytesSync();
-
-  String base64frontImg = base64Encode(frontImgBytes);
-  String base64backImg = base64Encode(backImgBytes);
-
   Uri uri = Uri.parse('$base_url/pillsearch/');
-  print(uri);
+  // print("good");
   http.Response response = await http.post(
     uri,
     headers: headers,
@@ -67,9 +96,8 @@ Future<Pill> SearchPill(pillImageFront, pillImageBack) async {
   );
 
   if(response.statusCode == 200){
-    final pillMap = json.decode(response.body);
-    print(pillMap);
-    return Pill.fromJson(pillMap);
+    final pillMap = await json.decode(response.body);
+    return PillList.fromJson(pillMap);
   }
   throw Exception('검색 실패');
 }

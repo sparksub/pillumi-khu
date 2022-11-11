@@ -5,11 +5,13 @@ Card BuildAnotherPillCard(title, name, img) {
       elevation: 2.0,
       child: Container(
         alignment: Alignment.centerLeft,
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(5.0),
         child: ListTile(
-          leading: Image(
-            image: AssetImage(img),
+          leading: Container(
             height: 60,
+            child: Image.network(img,
+                fit: BoxFit.fill
+            ),
           ),
           title: Text(title,
             style: const TextStyle(

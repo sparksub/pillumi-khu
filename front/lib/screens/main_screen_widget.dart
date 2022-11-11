@@ -1,10 +1,12 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:front/screens/result_screen_widget.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:front/util/palette.dart' as palette;
 
-import '../api/search_pill.dart';
+// import '../api/search_pill.dart';
+import '../util/img_to_base64.dart';
 import '../widgets/button/add_photo_button.dart';
 import '../util/permission.dart';
 
@@ -18,7 +20,7 @@ class MainScreenWidget extends StatefulWidget{
 class MainScreen extends State<MainScreenWidget> {
   XFile? _pickedFrontPhoto;
   XFile? _pickedBackPhoto;
-  Future<Pill>? resultPill;
+  late List<String> resultPill;
 
   final String _logoImage = 'assets/pill-icon-nobackground.png';
 
@@ -27,6 +29,7 @@ class MainScreen extends State<MainScreenWidget> {
     // TODO: implement initState
     requestCameraPermission();
     requestPhotosPermission();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
     super.initState();
   }
 
@@ -104,8 +107,8 @@ class MainScreen extends State<MainScreenWidget> {
                       : ButtonStyle(backgroundColor: palette.grayColor),
                   onPressed: ((_pickedFrontPhoto != null) && (_pickedBackPhoto != null)) ? () {
                     goToResultPage(context);
-                    resultPill = SearchPill(_pickedFrontPhoto, _pickedBackPhoto);
                     setState((){
+                      resultPill = imgToBase64(_pickedFrontPhoto, _pickedBackPhoto);
                       _pickedFrontPhoto = null;
                       _pickedBackPhoto = null;
                     });
@@ -135,7 +138,7 @@ class MainScreen extends State<MainScreenWidget> {
   void goToResultPage (context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ResultScreenWidget(resultPill!)),
+      MaterialPageRoute(builder: (context) => ResultScreenWidget(resultPill[0], resultPill[1])),
     );
   }
 }
