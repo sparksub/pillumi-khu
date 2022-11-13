@@ -29,7 +29,7 @@ class search_pill(Resource):
         # TODO: 기존 dataset에서 itemSeq로 공데포에서 복약정보 검색. 기존 dataset에서 약 분류데이터 가져와서 사용하기
 
         try:
-            similar = [[199200354, "건위소화제 (233)"], [199200706, "건위소화제(233)"]]
+            similar = [[197100081, "건위소화제 (233)"], [197000208, "비타민 A제 및 D제"]]
             p_id = str(uuid())
             data = request.get_json()
             # print(data)

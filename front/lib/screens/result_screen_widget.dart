@@ -47,7 +47,7 @@ class ResultScreen extends State<ResultScreenWidget> {
 
                   child: Text(
                     'Error: ${snapshot.error}', // 에러명을 텍스트에 뿌려줌
-                    style: TextStyle(fontSize: 15),
+                    style: const TextStyle(fontSize: 15),
                   ),
                 );
               }
@@ -64,9 +64,9 @@ class ResultScreen extends State<ResultScreenWidget> {
                           padding: const EdgeInsets.all(10),
                           child: Column(
                             children: [
-                              Container(
+                              SizedBox(
                                 height: 120,
-                                child: Image.network(snapshot.data!.main.pillImg.toString(),
+                                child: Image.network(snapshot.data!.main.pillImg,
                                   fit: BoxFit.cover
                                 ),
                               ),
@@ -97,43 +97,79 @@ class ResultScreen extends State<ResultScreenWidget> {
                                   )
                               ),
                               Column(
-                                children: [
-                                  (snapshot.data!.main.efficacy.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '효능효과',
-                                      snapshot.data!.main.efficacy.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.dosage.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '용법/용량',
-                                      snapshot.data!.main.dosage.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.atpnWarnQesitm.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '사용전, 주의사항경고',
-                                      snapshot.data!.main.atpnWarnQesitm.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.atpnQesitm.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '사용시, 주의사항',
-                                      snapshot.data!.main.atpnQesitm.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.intrcQesitm.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '사용시, 주의해야 할 음식 및 약',
-                                      snapshot.data!.main.intrcQesitm.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.seQesitm.toString() != "")
-                                      ? buildPillInfoCard(
-                                      '부작용',
-                                      snapshot.data!.main.seQesitm.toString())
-                                      : Container(),
-                                  (snapshot.data!.main.depoditMetodQesirm.toString().trim() != "")
-                                      ? buildPillInfoCard(
-                                      '보관법',
-                                      snapshot.data!.main.depoditMetodQesirm.toString())
-                                      : Container(),
-                                ]
+                                  children: [
+                                    (snapshot.data!.main.efficacy.toString().trim() != "")
+                                        ? buildPillInfoCard(
+                                          '효능효과',
+                                          snapshot.data!.main.efficacy.toString()
+                                    ):Container(),
+                                    (snapshot.data!.main.dosage.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.dosage != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '용법/용량',
+                                            snapshot.data!.main.dosage.toString(),
+                                            snapshot.data!.main.pictogramList.dosage)
+                                            :buildPillInfoCard(
+                                            '용법/용량',
+                                            snapshot.data!.main.dosage.toString())
+                                    ):Container(),
+                                    (snapshot.data!.main.atpnWarnQesitm.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.atpnWarnQesitm != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '사용전, 주의사항경고',
+                                            snapshot.data!.main.atpnWarnQesitm.toString(),
+                                            snapshot.data!.main.pictogramList.atpnWarnQesitm)
+                                            :buildPillInfoCard(
+                                            '사용전, 주의사항경고',
+                                            snapshot.data!.main.atpnWarnQesitm.toString())
+                                    ):Container(),
+                                    (snapshot.data!.main.atpnQesitm.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.atpnQesitm != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '사용시, 주의사항',
+                                            snapshot.data!.main.atpnQesitm.toString(),
+                                            snapshot.data!.main.pictogramList.atpnQesitm)
+                                            :buildPillInfoCard(
+                                            '사용시, 주의사항',
+                                            snapshot.data!.main.atpnQesitm.toString())
+                                    ):Container(),
+                                    (snapshot.data!.main.intrcQesitm.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.intrcQesitm != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '사용시, 주의해야 할 음식 및 약',
+                                            snapshot.data!.main.intrcQesitm.toString(),
+                                            snapshot.data!.main.pictogramList.intrcQesitm)
+                                            :buildPillInfoCard(
+                                            '사용시, 주의해야 할 음식 및 약',
+                                            snapshot.data!.main.intrcQesitm.toString())
+                                    ):Container(),
+                                    (snapshot.data!.main.seQesitm.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.seQesitm != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '부작용',
+                                            snapshot.data!.main.seQesitm.toString(),
+                                            snapshot.data!.main.pictogramList.seQesitm)
+                                            :buildPillInfoCard(
+                                            '부작용',
+                                            snapshot.data!.main.seQesitm.toString())
+                                    ):Container(),
+                                    (snapshot.data!.main.depoditMetodQesirm.toString().trim() != "")
+                                        ? (
+                                        (snapshot.data!.main.pictogramList.depoditMetodQesirm != []) ?
+                                        buildPillInfoPhotoCardWithString(
+                                            '보관법',
+                                            snapshot.data!.main.depoditMetodQesirm.toString(),
+                                            snapshot.data!.main.pictogramList.depoditMetodQesirm)
+                                            :buildPillInfoCard(
+                                            '보관법',
+                                            snapshot.data!.main.depoditMetodQesirm.toString())
+                                    ):Container(),
+                                  ]
                               ),
                               Container(
                                 alignment: Alignment.bottomLeft,
@@ -148,10 +184,8 @@ class ResultScreen extends State<ResultScreenWidget> {
                               Column(
                                 children: snapshot.data!.others.map<Widget>(
                                         (data)=>BuildAnotherPillCard(
-                                          data.className.toString(),
-                                          data.itemName.toString(),
-                                          data.pillImg.toString(),
-                                        )
+                                          context,
+                                          data)
                                 ).toList()
                               ),
                             ],
