@@ -45,6 +45,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  permission_handler: ^10.2.0
+  image_picker: ^0.8.6
+  http: ^0.13.5
+  flutter_native_splash: ^2.2.14
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +64,118 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/pill-icon-nobackground.png
+    - assets/bad-photo.jpg
+    - assets/good-photo.jpg
+    - assets/pictogram/C01.jpg
+    - assets/pictogram/C02.jpg
+    - assets/pictogram/C03.jpg
+    - assets/pictogram/C04.jpg
+    - assets/pictogram/C05.jpg
+    - assets/pictogram/C06.jpg
+    - assets/pictogram/C07.jpg
+    - assets/pictogram/C08.jpg
+    - assets/pictogram/C09.jpg
+    - assets/pictogram/C10.jpg
+    - assets/pictogram/C11.jpg
+    - assets/pictogram/C16.jpg
+    - assets/pictogram/C17.jpg
+    - assets/pictogram/C18.jpg
+    - assets/pictogram/C19.jpg
+    - assets/pictogram/C20.jpg
+    - assets/pictogram/C21.jpg
+    - assets/pictogram/C22.jpg
+    - assets/pictogram/C23.jpg
+    - assets/pictogram/C24.jpg
+    - assets/pictogram/C25.jpg
+    - assets/pictogram/C26.jpg
+    - assets/pictogram/C27.jpg
+    - assets/pictogram/C28.jpg
+    - assets/pictogram/D01.jpg
+    - assets/pictogram/D02.jpg
+    - assets/pictogram/D03.jpg
+    - assets/pictogram/D04.jpg
+    - assets/pictogram/D05.jpg
+    - assets/pictogram/D06.jpg
+    - assets/pictogram/D07.jpg
+    - assets/pictogram/D08.jpg
+    - assets/pictogram/D10.jpg
+    - assets/pictogram/D11.jpg
+    - assets/pictogram/D12.jpg
+    - assets/pictogram/D13.jpg
+    - assets/pictogram/D14.jpg
+    - assets/pictogram/D15.jpg
+    - assets/pictogram/D16.jpg
+    - assets/pictogram/D17.jpg
+    - assets/pictogram/D18.jpg
+    - assets/pictogram/D19.jpg
+    - assets/pictogram/D20.jpg
+    - assets/pictogram/D21.jpg
+    - assets/pictogram/D22.jpg
+    - assets/pictogram/D23.jpg
+    - assets/pictogram/D24.jpg
+    - assets/pictogram/D25.jpg
+    - assets/pictogram/D26.jpg
+    - assets/pictogram/D27.jpg
+    - assets/pictogram/E01.jpg
+    - assets/pictogram/E02.jpg
+    - assets/pictogram/E03.jpg
+    - assets/pictogram/E04.jpg
+    - assets/pictogram/E05.jpg
+    - assets/pictogram/E06.jpg
+    - assets/pictogram/E07.jpg
+    - assets/pictogram/E08.jpg
+    - assets/pictogram/E09.jpg
+    - assets/pictogram/F01.jpg
+    - assets/pictogram/F02.jpg
+    - assets/pictogram/F03.jpg
+    - assets/pictogram/F04.jpg
+    - assets/pictogram/F05.jpg
+    - assets/pictogram/F06.jpg
+    - assets/pictogram/F07.jpg
+    - assets/pictogram/F08.jpg
+    - assets/pictogram/F09.jpg
+    - assets/pictogram/F10.jpg
+    - assets/pictogram/F11.jpg
+    - assets/pictogram/F12.jpg
+    - assets/pictogram/F13.jpg
+    - assets/pictogram/F14.jpg
+    - assets/pictogram/F15.jpg
+    - assets/pictogram/F16.jpg
+    - assets/pictogram/F17.jpg
+    - assets/pictogram/F18.jpg
+    - assets/pictogram/F19.jpg
+    - assets/pictogram/I01.jpg
+    - assets/pictogram/I02.jpg
+    - assets/pictogram/I03.jpg
+    - assets/pictogram/I04.jpg
+    - assets/pictogram/I05.jpg
+    - assets/pictogram/I06.jpg
+    - assets/pictogram/I07.jpg
+    - assets/pictogram/I08.jpg
+    - assets/pictogram/P01.jpg
+    - assets/pictogram/P02.jpg
+    - assets/pictogram/P03.jpg
+    - assets/pictogram/P05.jpg
+    - assets/pictogram/P06.jpg
+    - assets/pictogram/P07.jpg
+    - assets/pictogram/P08.jpg
+    - assets/pictogram/P09.jpg
+    - assets/pictogram/P10.jpg
+    - assets/pictogram/P11.jpg
+    - assets/pictogram/P12.jpg
+    - assets/pictogram/P14.jpg
+    - assets/pictogram/P15.jpg
+    - assets/pictogram/P16.jpg
+    - assets/pictogram/P17.jpg
+    - assets/pictogram/P18.jpg
+    - assets/pictogram/P19.jpg
+    - assets/pictogram/S01.jpg
+    - assets/pictogram/S02.jpg
+    - assets/pictogram/S03.jpg
+    - assets/pictogram/S04.jpg
+    - assets/pictogram/S05.jpg
+    - assets/pictogram/S06.jpg
+    - assets/pictogram/S07.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -87,3 +203,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/pillumi-splash.png"
+  fullscreen: true

@@ -1,8 +1,14 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:front/screens/result_screen_widget.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:front/util/palette.dart' as palette;
 
+// import '../api/search_pill.dart';
+import '../util/img_to_base64.dart';
 import '../widgets/button/add_photo_button.dart';
+import '../util/permission.dart';
 
 class MainScreenWidget extends StatefulWidget{
   const MainScreenWidget({Key? key}) : super(key: key);
@@ -12,8 +18,21 @@ class MainScreenWidget extends StatefulWidget{
 }
 
 class MainScreen extends State<MainScreenWidget> {
-  bool front = false;
-  bool back = false;
+  XFile? _pickedFrontPhoto;
+  XFile? _pickedBackPhoto;
+  late List<String> resultPill;
+
+  final String _logoImage = 'assets/pill-icon-nobackground.png';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    requestCameraPermission();
+    requestPhotosPermission();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +45,7 @@ class MainScreen extends State<MainScreenWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(
-                image: AssetImage('assets/pill-icon-nobackground.png'),
+                image: AssetImage(_logoImage),
                 width: 70,
               ),
               SizedBox(
@@ -36,28 +55,39 @@ class MainScreen extends State<MainScreenWidget> {
                 '사진으로 알약을 검색해보세요!',
                 style: TextStyle(
                     color: palette.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
-              front ? Container(
+              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록 (server)
+              (_pickedFrontPhoto != null) ? Container(
                 width: 200,
                 height: 200,
-                color: palette.gray
-              ) : AddPhotoButtonWidget(text: "앞", updateBool: updateBool),
+                // color: palette.gray,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: FileImage(File(_pickedFrontPhoto!.path)),
+                      fit: BoxFit.cover
+                  ),
+                ),
+              ) : AddPhotoButtonWidget(text: "앞", updatePhoto: updatePhoto),
               SizedBox(
                 height: 10,
               ),
-              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록
-              back ? Container(
+              // TODO: 사진 추가하면, 추가한 사진이 Container에 들어가도록 (server)
+              (_pickedBackPhoto != null) ? Container(
                   width: 200,
                   height: 200,
-                  color: palette.gray
-              ) : AddPhotoButtonWidget(text: "뒷", updateBool: updateBool),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: FileImage(File(_pickedBackPhoto!.path)),
+                        fit: BoxFit.cover
+                  ),
+                ),
+              ) : AddPhotoButtonWidget(text: "뒷", updatePhoto: updatePhoto),
               SizedBox(
                 height: 20,
               ),
@@ -65,20 +95,22 @@ class MainScreen extends State<MainScreenWidget> {
                 width: 200,
                 height: 45,
                 child: ElevatedButton(
+                  // TODO: (server) 사진 보내서 데이터 받기
                   child: const Text('검색하기',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                       )),
-                  style: (front&&back) ?
+                  style: ((_pickedFrontPhoto != null) && (_pickedBackPhoto != null)) ?
                   ButtonStyle(backgroundColor: palette.darkBlueColor)
                       : ButtonStyle(backgroundColor: palette.grayColor),
-                  onPressed: (front&&back) ? () {
+                  onPressed: ((_pickedFrontPhoto != null) && (_pickedBackPhoto != null)) ? () {
                     goToResultPage(context);
                     setState((){
-                      front = !front;
-                      back = !back;
+                      resultPill = imgToBase64(_pickedFrontPhoto, _pickedBackPhoto);
+                      _pickedFrontPhoto = null;
+                      _pickedBackPhoto = null;
                     });
                   } : null,
                 ),
@@ -90,15 +122,15 @@ class MainScreen extends State<MainScreenWidget> {
     );
   }
 
-  void updateBool(String inputBool){
+  void updatePhoto(String inputBool, XFile photo){
     setState((){
       if(inputBool == '앞')
       {
-        front = !front;
+        _pickedFrontPhoto = photo;
       }
       else if(inputBool == '뒷')
       {
-        back = !back;
+        _pickedBackPhoto = photo;
       }
     });
   }
@@ -106,7 +138,8 @@ class MainScreen extends State<MainScreenWidget> {
   void goToResultPage (context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ResultScreenWidget()),
+      MaterialPageRoute(builder: (context) => ResultScreenWidget(resultPill[0], resultPill[1])),
     );
   }
 }
+
