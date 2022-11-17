@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../api/search_pill.dart';
+import '../../api/class/pill.dart';
 import '../../screens/similar_screen_widget.dart';
 
 Card BuildAnotherPillCard(BuildContext context, Pill pill) {

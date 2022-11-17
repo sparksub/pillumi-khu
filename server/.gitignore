@@ -11,3 +11,5 @@ __pycache__/
 git.sh
 
 /venv
+
+/api/pill_search/util/get_pill_info.py

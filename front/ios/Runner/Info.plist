@@ -63,5 +63,9 @@
 		<string>약 사진을 등록하기 위해서 필요한 권한입니다.</string>
 		<key>UIStatusBarHidden</key>
 		<true/>
+		<key>NSBonjourServices</key>
+        	<array>
+        		<string>_dartobservatory._tcp</string>
+        	</array>
 	</dict>
 </plist>

@@ -24,7 +24,7 @@ def get_pill_info(pill_code, pill_class):
 
         url = 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList'
         params = {
-            'serviceKey': "",
+            'serviceKey': "1+jQerEB5bUgoo7GNXrQR4b2bKwDMe+9M9pWE5zdBpoiHxX9ByldXHNaS1HLgS/HeT/B9Vd9kIFY3lgVlwstIQ==",
             'itemSeq': pill_code,
             # 'pageNo': pill_code,
             # 'numOfRows': '1',

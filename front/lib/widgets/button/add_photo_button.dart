@@ -21,32 +21,32 @@ class AddPhotoButton extends State<AddPhotoButtonWidget>{
   var _photo;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 200,
-      color: palette.gray,
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            IconButton(
-              icon: Icon(
+    return InkWell(
+      onTap: () async {
+          _photo = await ShowDialogWarning(context);
+          setState((){
+            widget.updatePhoto(widget.text, _photo);
+          });
+      },
+      child: Container(
+        width: 200,
+        height: 200,
+        color: palette.gray,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(
                 Icons.add_a_photo,
+                size: 100
               ),
-              iconSize: 100,
-              onPressed: () async {
-                _photo = await ShowDialogWarning(context);
-                setState((){
-                  widget.updatePhoto(widget.text, _photo);
-                });
-              },
-            ),
-            Text("${widget.text}면 등록하기",
-                style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ))
-          ],
+              Text("${widget.text}면 등록하기",
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600
+                  ))
+            ],
+          ),
         ),
       ),
     );
