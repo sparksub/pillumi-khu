@@ -41,11 +41,11 @@
 
 
 ## 👊 팀 소개
-#### 경희대학교 소프트웨어융합학과 18학번 박재훈
-🏠 Homepage:  
+### 경희대학교 소프트웨어융합학과 18학번 박재훈
+🏠 Homepage: https://github.com/jaehun-park  
 💻 Role: 분석 모델 개발
 
-#### 경희대학교 소프트웨어융합학과 19학번 박수빈
+### 경희대학교 소프트웨어융합학과 19학번 박수빈
 🏠 Homepage: https://nt.dariasubin.me/  
 💻 Role: 모바일 앱, 서버 개발
 
