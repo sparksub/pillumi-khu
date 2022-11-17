@@ -7,6 +7,7 @@ from api.pill_model.pill_model import pill_model
 
 app = Flask(__name__)
 api = Api(app, title="Pillumi API Documentation")
+ip = '172.16.23.42'
 
 
 def create_app():
@@ -29,4 +30,4 @@ if __name__ == "__main__":
 
     api.add_namespace(pill_search)
     api.add_namespace(pill_model)
-    app.run('172.16.23.42', port=5001, debug=True)
+    app.run(ip, port=5001, debug=True)
