@@ -17,7 +17,7 @@
 
 ## 서비스 소개
 알약 앞/뒤 사진만으로 손쉽게 알약 복약정보를 검색해보세요!
-<img width="1320" alt="main-pillumi" src="https://user-images.githubusercontent.com/57142322/202414358-dd2c3737-4507-42b7-8a48-8a67ccb2e1ea.png">
+<img width="800" alt="main-pillumi" src="https://user-images.githubusercontent.com/57142322/202414358-dd2c3737-4507-42b7-8a48-8a67ccb2e1ea.png">
 
 
 
@@ -25,7 +25,7 @@
 ## ⚙️ 기술스택 & 개발환경
 
 ### 사용언어 및 프레임워크
-<img width="1320" alt="framework-pillumi" src="https://user-images.githubusercontent.com/57142322/202414219-d129b61c-65f8-45bd-b5fc-9de5f1210eb0.png">
+<img width="800" alt="framework-pillumi" src="https://user-images.githubusercontent.com/57142322/202414219-d129b61c-65f8-45bd-b5fc-9de5f1210eb0.png">
 
 + 모바일 앱: Flutter (Dart)
 + Backend: Flask (Python)
@@ -33,7 +33,7 @@
 
 
 ### 사용 데이터 셋 & API
-<img width="1296" alt="dataset-pillumi" src="https://user-images.githubusercontent.com/57142322/202414551-6aaee5be-2ba3-4df3-9a78-d933a4c7fcb1.png">
+<img width="800" alt="dataset-pillumi" src="https://user-images.githubusercontent.com/57142322/202414551-6aaee5be-2ba3-4df3-9a78-d933a4c7fcb1.png">
 
 + [식품의약품안전처: 의약품 낱알식별 정보](https://www.data.go.kr/data/15057639/openapi.do)
 + [식품의약품안전처: 의약품 개요정보 (e약은요)](https://www.data.go.kr/data/15075057/openapi.do) 
