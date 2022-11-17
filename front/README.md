@@ -3,7 +3,7 @@
 필루미 모바일 앱에 대한 문서입니다.
 
 ## UI Design
-## Design system
+### Design system
 <img width="600" alt="design-system-pillumi" src="https://user-images.githubusercontent.com/57142322/202423464-005c5426-5889-49de-a634-c5ba7452f0b0.png">
 
 
