@@ -1,4 +1,4 @@
-# Flutter Project for Pillumi
+# Flask Project for Pillumi
 
 필루미 서버에 대한 문서입니다.  
 
