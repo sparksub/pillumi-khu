@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+// We didn't use this card widget.
 Card buildPillInfoCard(title, text) {
   return Card(
       elevation: 2.0,
@@ -34,7 +36,6 @@ Card buildPillInfoCard(title, text) {
 }
 
 Card buildPillInfoPhotoCard(String title, List<dynamic> imgUrlList) {
-
   return Card(
       elevation: 2.0,
       child: Container(
@@ -67,7 +68,7 @@ Card buildPillInfoPhotoCard(String title, List<dynamic> imgUrlList) {
 }
 
 
-Card buildPillInfoPhotoCardWithString(String title, String text, List<dynamic> imgUrlList) {
+Card buildPillInfoPhotoCardWithText(String title, String text, List<dynamic> imgUrlList) {
   return Card(
       elevation: 2.0,
       child: Container(

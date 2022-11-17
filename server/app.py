@@ -29,4 +29,4 @@ if __name__ == "__main__":
 
     api.add_namespace(pill_search)
     api.add_namespace(pill_model)
-    app.run('172.30.1.46', port=5001, debug=True)
+    app.run('172.16.23.42', port=5001, debug=True)
