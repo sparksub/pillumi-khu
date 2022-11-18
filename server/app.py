@@ -4,10 +4,10 @@ import os
 
 from api.pill_search.pill_search import pill_search
 from api.pill_model.pill_model import pill_model
+import utils
 
 app = Flask(__name__)
 api = Api(app, title="Pillumi API Documentation")
-ip = '172.16.23.42'
 
 
 def create_app():
@@ -30,4 +30,4 @@ if __name__ == "__main__":
 
     api.add_namespace(pill_search)
     api.add_namespace(pill_model)
-    app.run(ip, port=5001, debug=True)
+    app.run(utils.ip, port=5001, debug=True)
