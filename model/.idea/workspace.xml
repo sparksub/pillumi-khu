@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb0ded90-c5b6-406a-b76e-261c099cdd10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/segment-model.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_loader_cache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/segmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/isnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/pill_model_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/segmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/data_loader_cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/dis_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/api/search_pill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/api/search_pill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/segmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/pill_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/pill_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_search/pill_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_search/pill_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../server/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,8 +60,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/model" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,6 +75,9 @@
       <workItem from="1668871366750" duration="6000" />
       <workItem from="1668960561272" duration="518000" />
       <workItem from="1668962863521" duration="917000" />
+      <workItem from="1668964020774" duration="657000" />
+      <workItem from="1669034399756" duration="148000" />
+      <workItem from="1669053612433" duration="131000" />
     </task>
     <servers />
   </component>

@@ -1,40 +1,23 @@
+import os
+
+import gdown
 import numpy as np
 
-from PIL import Image
-import torch
 from torch.autograd import Variable
 from torchvision import transforms
-import torch.nn.functional as F
+from api.pill_model.model.isnet import *
 
 import requests
 from io import BytesIO
 
-from data_loader_cache import normalize, im_reader, im_preprocess
-from model.isnet import *
+from api.pill_model.util.data_loader_cache import normalize, im_reader, im_preprocess
 
-PATH = '../model/'
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-net = torch.load(PATH + 'model.pt')
+absolute_path = "/Users/sparksub/Documents/GitHub/pillumi-khu/server/api/pill_model/saved_models/"
 
-hypar = {}  # paramters for inferencing
-
-hypar["model_path"] = "../model"  ## load trained weights from this path
-# hypar["restore_model"] = "isnet.pth"  ## name of the to-be-loaded weights
-hypar["interm_sup"] = False  ## indicate if activate intermediate feature supervision
-
-##  choose floating point accuracy --
-hypar["model_digit"] = "full"  ## indicates "half" or "full" accuracy of float number
-hypar["seed"] = 0
-
-hypar["cache_size"] = [512, 512]  ## cached input spatial resolution, can be configured into different size
-
-## data augmentation parameters ---
-hypar["input_size"] = [512,
-                       512]  ## mdoel input spatial size, usually use the same value hypar["cache_size"], which means we don't further resize the images
-hypar["crop_size"] = [512,
-                      512]  ## random crop size from the input, it is usually set as smaller than hypar["cache_size"], e.g., [920,920] for data augmentation
-
-hypar['model'] = ISNetDIS()
+if not os.path.exists(absolute_path + "isnet.pth"):
+    MODEL_PATH_URL = "https://drive.google.com/uc?id=1KyMpRjewZdyYfxHPYcd-ZbanIXtin0Sn"
+    gdown.download(MODEL_PATH_URL, absolute_path + "isnet.pth", use_cookies=False)
 
 class GOSNormalize(object):
     '''
@@ -52,6 +35,25 @@ class GOSNormalize(object):
 
 transform = transforms.Compose([GOSNormalize([0.5, 0.5, 0.5], [1.0, 1.0, 1.0])])
 
+hypar = {}  # paramters for inferencing
+
+hypar["model_path"] = "../saved_models"  ## load trained weights from this path
+hypar["restore_model"] = "isnet.pth"  ## name of the to-be-loaded weights
+hypar["interm_sup"] = False  ## indicate if activate intermediate feature supervision
+
+##  choose floating point accuracy --
+hypar["model_digit"] = "full"  ## indicates "half" or "full" accuracy of float number
+hypar["seed"] = 0
+
+hypar["cache_size"] = [512, 512]  ## cached input spatial resolution, can be configured into different size
+
+## data augmentation parameters ---
+hypar["input_size"] = [512,
+                       512]  ## mdoel input spatial size, usually use the same value hypar["cache_size"], which means we don't further resize the images
+hypar["crop_size"] = [512,
+                      512]  ## random crop size from the input, it is usually set as smaller than hypar["cache_size"], e.g., [920,920] for data augmentation
+
+hypar["model"] = ISNetDIS()
 
 def load_image(im_path, hypar):
     if im_path.startswith("http"):
@@ -91,11 +93,3 @@ def predict(net, inputs_val, shapes_val, hypar, device):
 
     if device == 'cuda': torch.cuda.empty_cache()
     return (pred_val.detach().cpu().numpy() * 255).astype(np.uint8)  # it is the mask we need
-
-
-
-def segmentation(img_path, img_name, SAVE_PATH):
-    image_tensor, orig_size = load_image(img_path, hypar)
-    mask = predict(net, image_tensor, orig_size, hypar, device)
-    im = Image.fromarray(mask)
-    im.save(SAVE_PATH + img_name)
