@@ -14,4 +14,6 @@ git.sh
 
 /api/pill_search/util/get_pill_info.py
 
-/assets/
+/assets
+
+/api/pill_model/saved_models/isnet.pth

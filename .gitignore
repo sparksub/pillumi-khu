@@ -1,5 +1,5 @@
 
 .DS_Store
 server/api/pill_model/saved_models/isnet.pth
-server/api/pill_model/saved_models/segment-model.pth
 model/model/segment-model.pt
+server/api/pill_model/saved_models/segment-model.pth
