@@ -35,7 +35,9 @@ class ResultScreen extends State<ResultScreenWidget> {
             builder: (BuildContext context, AsyncSnapshot snapshot){
               if(snapshot.hasData == false)
               {
-                return buildProgress();
+                return Scaffold(
+                    body: buildProgress()
+                );
               }
               else if (snapshot.hasError)
               {
