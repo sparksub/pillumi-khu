@@ -1,2 +1,4 @@
 
 .DS_Store
+model/model/segment-model.pt
+server/api/pill_model/saved_models/segment-model.pth
