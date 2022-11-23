@@ -5,24 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb0ded90-c5b6-406a-b76e-261c099cdd10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/isnet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/model/pill_model_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/segmentation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/data_loader_cache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/api/pill_model/util/dis_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/kotlin/com/example/front/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/kotlin/com/example/front/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/res/values-night/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../front/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Podfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchBackground.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" afterPath="$PROJECT_DIR$/../front/ios/Runner/Runner-Bridging-Header.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/api/class/pictogram.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/api/class/pictogram.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/api/class/pill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/api/class/pill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/api/class/pill_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/api/class/pill_list.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/lib/api/search_pill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/api/search_pill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/screens/main_screen_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/screens/main_screen_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/screens/result_screen_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/screens/result_screen_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/screens/similar_screen_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/screens/similar_screen_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/util/create_material_color.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/util/create_material_color.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/util/img_to_base64.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/util/img_to_base64.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/util/palette.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/util/palette.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/util/permission.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/util/permission.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/button/add_photo_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/button/add_photo_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/card/build_another_pill_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/card/build_another_pill_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/card/build_pill_info_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/card/build_pill_info_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/card/text_for_pill_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/card/text_for_pill_info.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/dialog/bulid_progress.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/dialog/bulid_progress.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/dialog/show_dialog_warning.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/dialog/show_dialog_warning.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/view/build_main_pill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/view/build_main_pill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/lib/widgets/view/build_other_pill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/lib/widgets/view/build_other_pill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../front/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../front/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GetPillDataFromWeb.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/GetPillDataFromWeb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GetPillImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/GetPillImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PrivateKey.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/PrivateKey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/isnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/isnet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_loader_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_loader_cache.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/segmentation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../server/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/model/isnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/model/isnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/model/pill_model_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/model/pill_model_request.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/api/pill_model/pill_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/pill_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/segmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/util/data_loader_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/util/data_loader_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_model/util/dis_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_model/util/dis_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_search/model/pill_search_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_search/model/pill_search_request.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/api/pill_search/pill_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_search/pill_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/api/pill_search/util/make_pictogram_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/pill_search/util/make_pictogram_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../server/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/templates/pillumi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../server/templates/pillumi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +156,7 @@
       <workItem from="1668964020774" duration="657000" />
       <workItem from="1669034399756" duration="148000" />
       <workItem from="1669053612433" duration="131000" />
+      <workItem from="1669181680387" duration="12000" />
     </task>
     <servers />
   </component>
