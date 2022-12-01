@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from flask_restx import Api
-import os
 
 from api.pill_search.pill_search import pill_search
 from api.pill_model.pill_model import pill_model

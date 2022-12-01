@@ -1,6 +1,3 @@
-import io
-import cv2 as cv
-
 from api.pill_model.util.dis_method import *
 from PIL import Image
 
@@ -24,11 +21,3 @@ def segmentation(img_path, save_path):
     mask_img = mask_img.convert('L')
     row_img.putalpha(mask_img)
     row_img.save(save_path)
-
-    # src = cv.imread(img_path)
-    # mask = cv.imread('assets/mask.png', cv.IMREAD_GRAYSCALE)
-    # result = np.zeros_like(mask)
-    #
-    # cv.copyTo(src, mask, result)
-    #
-    # cv.imwrite(save_path, result)

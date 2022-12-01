@@ -50,6 +50,17 @@ class ResultScreen extends State<ResultScreenWidget> {
                   ),
                 );
               }
+              else if (snapshot.data!.main.itemName == 'NONE')
+              {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+
+                  child: Text(
+                    '검색에 실패했습니다.', // 에러명을 텍스트에 뿌려줌
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                );
+              }
               else
               {
                 return Scaffold(

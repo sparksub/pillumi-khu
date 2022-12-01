@@ -1,7 +1,9 @@
 from flask_restx import Namespace, Resource
 
+from api.pill_model.model.classification.Model import pill_classification_top5
 from api.pill_model.model.pill_model_request import *
 from api.pill_model.segmentation import segmentation
+import cv2 as cv
 
 pill_model = Namespace("pillmodel")
 
@@ -25,10 +27,16 @@ class search_pill(Resource):
         """
 
         try:
-            segmentation('assets/test1.jpg',
-                         'assets/result-front.png')
-            segmentation('assets/test2.jpg',
-                         'assets/result-back.png')
+            segmentation('assets/pill_front.jpg',
+                         'assets/result_front.png')
+            segmentation('assets/pill_back.jpg',
+                         'assets/result_back.png')
+
+            pill_front = cv.imread('assets/result_front.png')
+            pill_back = cv.imread('assets/result_back.png')
+
+            result_list = pill_classification_top5(pill_front, pill_back)
+            print(result_list)
 
             return {
                        "front-img": "string",
