@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 import 'class/pill_list.dart';
 
-String base_url = 'http://172.30.1.46:5001';
+String base_url = 'http://172.16.23.102:5001';
 
 Future<PillList> SearchPill(base64frontImg, base64backImg) async {
   Map<String, String> headers = {
@@ -13,6 +13,8 @@ Future<PillList> SearchPill(base64frontImg, base64backImg) async {
   };
 
   Uri uri = Uri.parse('$base_url/pillsearch/');
+
+  print('go');
 
   http.Response response = await http.post(
     uri,

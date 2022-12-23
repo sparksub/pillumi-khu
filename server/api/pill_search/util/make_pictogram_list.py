@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def make_pictogram_list(pill_info):
-    pictogram_info = pd.read_csv('/Users/sparksub/Documents/GitHub/pillumi-khu/server/assets/pictogram-info.csv')
+    pictogram_info = pd.read_csv('/Users/sparksub/Development/pillumi-khu/server/assets/pictogram-info.csv')
     pictogram_info = pictogram_info.values
     pictogram_list = []
 
@@ -34,6 +34,7 @@ def make_pictogram_list(pill_info):
                             else:
                                 value_list.append(item[0])
                                 check = True
+
         pictogram_list.append(value_list)
     return {
         "Dosage": pictogram_list[0],

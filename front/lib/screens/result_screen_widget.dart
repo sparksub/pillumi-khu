@@ -16,12 +16,10 @@ class ResultScreenWidget extends StatefulWidget {
   ResultScreen createState()=> ResultScreen();
 }
 class ResultScreen extends State<ResultScreenWidget> {
-  var logData;
 
   @override
   void initState(){
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
-    logData = SearchPill(widget.frontPhoto, widget.backPhoto);
     super.initState();
   }
 
