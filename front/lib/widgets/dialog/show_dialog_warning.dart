@@ -72,7 +72,9 @@ ShowDialogWarning(BuildContext context) async {
         actions: <Widget>[
           TextButton(
             onPressed: () async {
-              var image = await ImagePicker.platform.getImage(source: ImageSource.camera);
+              var image = await ImagePicker.platform.getImage(
+                  source: ImageSource.camera,
+              );
               // File file = await ImagePicker.pickImage(source: ImageSource.camera);
               Navigator.pop(context, image);
             },
@@ -99,7 +101,9 @@ ShowDialogWarning(BuildContext context) async {
           ),
           TextButton(
             onPressed: () async {
-              var image = await ImagePicker.platform.getImage(source: ImageSource.gallery);
+              var image = await ImagePicker.platform.getImage(
+                  source: ImageSource.gallery,
+              );
               // File file = await ImagePicker.pickImage(source: ImageSource.gallery);
               Navigator.pop(context, image);
             },

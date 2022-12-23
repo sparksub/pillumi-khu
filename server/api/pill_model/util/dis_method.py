@@ -45,13 +45,13 @@ hypar["interm_sup"] = False  ## indicate if activate intermediate feature superv
 hypar["model_digit"] = "full"  ## indicates "half" or "full" accuracy of float number
 hypar["seed"] = 0
 
-hypar["cache_size"] = [512, 512]  ## cached input spatial resolution, can be configured into different size
+hypar["cache_size"] = [700, 700]  ## cached input spatial resolution, can be configured into different size
 
 ## data augmentation parameters ---
-hypar["input_size"] = [512,
-                       512]  ## mdoel input spatial size, usually use the same value hypar["cache_size"], which means we don't further resize the images
-hypar["crop_size"] = [512,
-                      512]  ## random crop size from the input, it is usually set as smaller than hypar["cache_size"], e.g., [920,920] for data augmentation
+hypar["input_size"] = [700,
+                       700]  ## mdoel input spatial size, usually use the same value hypar["cache_size"], which means we don't further resize the images
+hypar["crop_size"] = [700,
+                      700]  ## random crop size from the input, it is usually set as smaller than hypar["cache_size"], e.g., [920,920] for data augmentation
 
 hypar["model"] = ISNetDIS()
 

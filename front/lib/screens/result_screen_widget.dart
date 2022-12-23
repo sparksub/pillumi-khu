@@ -16,12 +16,10 @@ class ResultScreenWidget extends StatefulWidget {
   ResultScreen createState()=> ResultScreen();
 }
 class ResultScreen extends State<ResultScreenWidget> {
-  var logData;
 
   @override
   void initState(){
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
-    logData = SearchPill(widget.frontPhoto, widget.backPhoto);
     super.initState();
   }
 
@@ -46,6 +44,17 @@ class ResultScreen extends State<ResultScreenWidget> {
 
                   child: Text(
                     'Error: ${snapshot.error}', // 에러명을 텍스트에 뿌려줌
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                );
+              }
+              else if (snapshot.data!.main.itemName == 'NONE')
+              {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+
+                  child: Text(
+                    '검색에 실패했습니다.', // 에러명을 텍스트에 뿌려줌
                     style: const TextStyle(fontSize: 15),
                   ),
                 );
