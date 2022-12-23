@@ -12,7 +12,7 @@
 알약 앞/뒤 사진만으로 손쉽게 알약 복약정보를 검색해보세요!  
 <img width="600" alt="main-pillumi" src="https://user-images.githubusercontent.com/57142322/202414358-dd2c3737-4507-42b7-8a48-8a67ccb2e1ea.png">
 
-### READ.md 모음
+### README.md 모음
 + [모바일 앱: Flutter](https://github.com/sparksub/pillumi-khu/tree/main/front)
 + [서버: Flask](https://github.com/sparksub/pillumi-khu/tree/main/server)
 + [분석모델: Tensorflow]() TBA
