@@ -15,7 +15,7 @@
 ### README.md 모음
 + [모바일 앱: Flutter](https://github.com/sparksub/pillumi-khu/tree/main/front)
 + [서버: Flask](https://github.com/sparksub/pillumi-khu/tree/main/server)
-+ [분석모델: Tensorflow]() TBA
++ [분석모델: Tensorflow](https://github.com/sparksub/pillumi-khu/tree/main/model)
 
 
 ## 🎯 개발 목표
